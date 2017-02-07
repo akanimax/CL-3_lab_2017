@@ -1,0 +1,33 @@
+Please enter the elements separated by space
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 
+1. add a new element
+2. search for an element
+3. sort
+4. exit
+>>> 2
+Enter the element to be searched: 5
+Found
+Worst case: Θ(n)
+Best case: Θ(log n)
+1. add a new element
+2. search for an element
+3. sort
+4. exit
+>>> 1
+Enter the element to be added: 20
+Worst case: Θ(n)
+Best case: Θ(log n)
+1. add a new element
+2. search for an element
+3. sort
+4. exit
+>>> 3
+|1|-->2   |2|-->3   |3|-->4   |4|-->5   |5|-->6   |6|-->7   |7|-->8   |8|-->9   |9|-->10   |10|-->11   |11|-->12   |12|-->13   |13|-->14   |14|-->15   |15|-->20   |20|   
+Average case: Θ(n)
+1. add a new element
+2. search for an element
+3. sort
+4. exit
+>>> 4
+The program will now exit
+
