@@ -1,0 +1,33 @@
+botman@botmatrix:~/Programming/College/Semester_8/CL-3_lab_2017/Assignmnet_A4$ python load_data.py
+botman@botmatrix:~/Programming/College/Semester_8/CL-3_lab_2017/Assignmnet_A4$ python dini_prac.py 
+Philosopher 1 is hungry Philosopher 0 is hungry 
+ Philosopher 0 is finally eating
+
+Philosopher 2 is hungry Philosopher 4 is hungry Philosopher 3 is hungry 
+
+
+Philosopher 3 is finally eating
+{{u'ph_no'u'ph_no': : 0, u'_id': 3ObjectId('58dfbc10c103ee1e9bd36c6c'), u'temp': , 99}
+u'_id': ObjectId('58dfbc10c103ee1e9bd36c6f'), u'temp': 45}
+Philosopher 0 is finally finished eating
+ Philosopher 3 is finally finished eating
+Philosopher 4 is finally eating
+{u'ph_no': 4, u'_id': ObjectId('58dfbc10c103ee1e9bd36c70'), u'temp': 11}
+Philosopher 2 is hungry 
+Philosopher 4 is finally finished eating
+Philosopher 1 is hungry 
+ Philosopher 0 is hungry 
+Philosopher 3 is hungry 
+Philosopher 3 is finally eating
+{u'ph_no': 3, u'_id': ObjectId('58dfbc10c103ee1e9bd36c6f'), u'temp': 45}
+Philosopher 3 is finally finished eating
+Philosopher 4 is hungry 
+Philosopher 0 is hungry 
+Philosopher 3 is hungry 
+Philosopher 4 is hungry 
+Finishing!
+Philosopher 3 is hungry 
+Philosopher 3 is finally eating
+{u'ph_no': 3, u'_id': ObjectId('58dfbc10c103ee1e9bd36c6f'), u'temp': 45}
+Philosopher 3 is finally finished eating
+

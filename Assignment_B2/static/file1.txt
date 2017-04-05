@@ -1,0 +1,1 @@
+This is a basic plagiarism detector. It compares the input text with the three default files.

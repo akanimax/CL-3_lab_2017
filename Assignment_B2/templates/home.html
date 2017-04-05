@@ -1,0 +1,20 @@
+<html>
+<head>
+<h4> Welcome to Plagiarism checker </h4>
+</head>
+<body>
+<p>Enter your text here: </p>
+<br>
+
+
+	      <form action="" method="POST" name="form">
+<div class="form-group">
+                    <label class="control-label" for="input_text">Input Text</label>
+                    {{ form.input_text(size=50) }}
+                </div>
+<button type="submit" class="btn" >Submit</button>
+{% include "flash.html" %}
+{% block content %}{% endblock %}
+</form>
+</body>
+</html>
