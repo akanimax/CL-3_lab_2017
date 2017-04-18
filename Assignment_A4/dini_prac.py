@@ -1,3 +1,4 @@
+import sys
 from pymongo import MongoClient
 import threading
 from threading import Thread
@@ -9,7 +10,7 @@ class Philosophers(Thread):
 	def read_mongo(self,indexx):
 		db = Philosophers.connection.test.diniraw7  #Philosophers.connection.DB.coll_name
 		cursor = db.find({"ph_no":indexx})
- 		print cursor[0]
+ 		sys.stdout.write(str(cursor[0]) + "\n")
 
 
 
@@ -19,14 +20,13 @@ class Philosophers(Thread):
 		self.indexx = indexx
 		self.leftFork = leftFork
 		self.rightFork = rightFork
-  
+
 
 
 
 	def run(self):
 		while(self.running==True):  #note:  self.running !
-			time.sleep(6)
-			print 'Philosopher %d is hungry '%self.indexx
+			sys.stdout.write('Philosopher ' + self.name + ' is hungry\n')
 			self.get_fork()
 
 	def get_fork(self):
@@ -36,13 +36,14 @@ class Philosophers(Thread):
 		while(self.running == True):
 			fork1.acquire(True)
 			val = fork2.acquire(False)
-			if val:
-				break
-				fork1.release()   #if not got 2nd fork,release first fork
-				fork1, fork2 = fork2, fork1  #swap
+			if val: break
 
-	  		else:
-				return
+			fork1.release()   #if not got 2nd fork,release first fork
+
+			sys.stdout.write(self.name + " swaps the forks\n")
+			fork1, fork2 = fork2, fork1  #swap
+		else:
+			return
 
 		self.dine()
 		fork1.release()
@@ -50,10 +51,10 @@ class Philosophers(Thread):
 
 
 	def dine(self):
-		print "Philosopher %d is finally eating"%self.indexx
+		sys.stdout.write("Philosopher " + self.name + " is finally eating\n")
 		self.read_mongo(self.indexx)
-		time.sleep(5)
-		print "Philosopher %d is finally finished eating"%self.indexx
+		time.sleep(3)
+		sys.stdout.write("Philosopher " + self.name + " is finally finished eating\n")
 
 def Dining():
 	fork=[]
@@ -61,7 +62,7 @@ def Dining():
 	for i in range (5):
  		fork.append(threading.Lock())
 	
-	names = ("a","b","c","d","e")
+	names = ("Animesh","Giraffe","Colha","donkey","Erlich")
 	
 	phils = []
 	for i in range(5):
@@ -72,7 +73,7 @@ def Dining():
 		p.start()
  
 	time.sleep(30)
-	print "Finishing!"
-	Philosophers.running = False 
+	Philosophers.running = False
+	sys.stdout.write("Finishing!\n")
 
 Dining()

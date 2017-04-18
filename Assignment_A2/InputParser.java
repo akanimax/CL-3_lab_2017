@@ -36,7 +36,7 @@ public class InputParser {
 		}
 		return array;
 	}
-	public static void main(String args[]) {
-		new InputParser();
-	}
+	//public static void main(String args[]) {
+	//	new InputParser();
+	//}
 }

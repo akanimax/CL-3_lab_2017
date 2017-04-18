@@ -5,14 +5,18 @@ public class Quicksort {
 		System.out.println("Enter the array to be sorted(space separated): ");
 		InputParser parser = new InputParser();
 		int array[] = parser.getInput();
+		
 		ConcurrentQuicksort qs = new ConcurrentQuicksort(array, 0, array.length-1, 1);
 		new Thread(qs).start();
 		Thread.sleep(1000);
+		
 		//too lazy to use join or other methods to wait for all the threads to complete
+		
 		System.out.println("\nThe sorted array is:");
 		for(int i=0; i<array.length; i++) {
 			System.out.print(array[i]+ " ");
 		}
+		
 		System.out.println();
 	}
 }

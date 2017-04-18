@@ -49,5 +49,4 @@ public class ConcurrentQuicksort implements Runnable{
 		System.out.print("Thread"+id+" is now sorting: "+print(lo,hi));
 		quicksort();
 	}
-
 }

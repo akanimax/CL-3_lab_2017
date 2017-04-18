@@ -55,8 +55,8 @@ public class ConcurrentQuickSort {
 		}
 		System.out.println();
 	}
+
 	public static void main(String[] args) {
 		ConcurrentQuickSort qs = new ConcurrentQuickSort();
 	}
-
 }
